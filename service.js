@@ -4,3 +4,22 @@ function getImages( pageNumber ) {
         return response.data
     })
 }
+
+
+
+
+// side lesson to go deep into Promise
+// doItAfter( 2 )
+//     .then( ( message ) => console.log( message ) )
+//     .catch( () => console.log( 'error' ) )
+
+function doItAfter( seconds ) {
+    let promise = new Promise( ( resolve, reject ) => {
+        setTimeout( () => {
+            resolve( 'done' )
+            // reject()
+        }, seconds * 1000 )
+    })
+
+    return promise
+}
