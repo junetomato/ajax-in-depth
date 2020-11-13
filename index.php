@@ -15,10 +15,14 @@
 </head>
 <body>
 
-    <button id="click-me">ClickMe</button>
+    <button id="click-me">Get Images</button>
     номер страницы: <input type="number" value="" id="page-number">
 
+    <button id="get-tasks">Get Tasks</button>
+
     <div id="result"></div>
+
+    <ul id="tasks-result"></ul>
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
