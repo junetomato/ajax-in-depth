@@ -16,7 +16,6 @@ $getTasksButton.addEventListener( 'click', () => {
 })
 
 // createTask( 'learn js' ).then( ( data ) => {
-//     debugger
 //     console.log( data )
 // })
 
