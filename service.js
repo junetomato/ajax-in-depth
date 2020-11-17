@@ -6,7 +6,7 @@ function getImages( pageNumber ) {
 }
 
 function getTasks() {
-    const promise = axios.get( `https://repetitora.net/api/JS/Tasks?widgetId=123456` )
+    const promise = axios.get( `https://repetitora.net/api/JS/Tasks?widgetId=123456&count=30` )
     return promise.then( ( response ) => {
         return response.data
     })
@@ -17,6 +17,26 @@ function createTask( title ) {
         widgetId: 123456,
         title: title,
     })
+
+    return promise.then( ( response ) => {
+        return response.data
+    })
+}
+
+function updateTask( id, title ) {
+    const promise = axios.put( `https://repetitora.net/api/JS/Tasks`, {
+        widgetId: 123456,
+        taskId: id,
+        title: title,
+    })
+
+    return promise.then( ( response ) => {
+        return response.data
+    })
+}
+
+function deleteTask( id ) {
+    const promise = axios.delete( `https://repetitora.net/api/JS/Tasks?widgetId=123456&taskId=${id}` )
 
     return promise.then( ( response ) => {
         return response.data
