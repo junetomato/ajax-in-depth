@@ -23,12 +23,17 @@ function createTask( title ) {
     })
 }
 
-function updateTask( id, title ) {
-    const promise = axios.put( `https://repetitora.net/api/JS/Tasks`, {
-        widgetId: 123456,
-        taskId: id,
-        title: title,
-    })
+function updateTask( id, title, done ) {
+    const promise = axios({
+        method: 'put',
+        url: `https://repetitora.net/api/JS/Tasks`,
+        data: {
+            widgetId: 123456,
+            taskId: id,
+            title: title,
+            done: true,
+        }
+    });
 
     return promise.then( ( response ) => {
         return response.data
